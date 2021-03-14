@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myFirstApp">
 <head>
     <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="index.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular.js</title>
 </head>
-<body onload="sho()">
+<body>
     <h3>Hello Angular.js , i am biswajit pradhan.</h3>
-    <script>
-       function sho()
-       {
-        let obj={
-            type:"object",
-            roll:"121",
-            sec:"A"
-        }
-        console.log(JSON.stringify(obj))
-       }
-    </script>
+    <div ng-controller="myFirstController">
+        {{name}}<br>
+        {{sayHello()}}
+        <input type="text" ng-model="name">
+    </div>
 </body>
 </html>
